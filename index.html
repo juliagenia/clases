@@ -2,20 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
 </head>
 
 <body class="bg-blue-500 p-5">
-     <h1 class="text-3xl font-bold underline text-center">USUARIO</h1>
-  
+    <h1 class="text-3xl font-bold underline text-center text-white">USUARIO</h1>
+    <div id="datosUsuario" class="text-center text-white mt-4 text-lg"></div>
 
+    <form id="pinForm" class="max-w-md mx-auto mt-10 bg-white p-6 rounded shadow">
+        <label class="block mb-2 font-semibold">PIN actual</label>
+        <input type="password" id="oldPin" class="w-full p-2 mb-4 border rounded" />
+
+        <label class="block mb-2 font-semibold">Nuevo PIN</label>
+        <input type="password" id="newPin" class="w-full p-2 mb-4 border rounded" />
+
+        <label class="block mb-2 font-semibold">Repetir nuevo PIN</label>
+        <input type="password" id="newPin2" class="w-full p-2 mb-4 border rounded" />
+
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            Guardar
+        </button>
+    </form>
+
+    <div id="mensaje" class="max-w-md mx-auto mt-4 text-center font-semibold p-2 rounded hidden"></div>
 
     <script type="module" src="index.js"></script>
-
 </body>
 
 </html>
